@@ -1,8 +1,35 @@
 {
   "devDependencies": {
+    "nodemon": "^2.0.20",
+    "tailwind-clip-path": "^1.0.0",
     "tailwindcss": "^3.1.8"
   },
   "dependencies": {
-    "animejs": "^3.2.1"
-  }
+    "animejs": "^3.2.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.25.1",
+    "typed.js": "^2.0.12"
+  },
+  "name": "express",
+  "version": "1.0.0",
+  "main": "database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avinier/Save-Walter-White.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Avinier/Save-Walter-White/issues"
+  },
+  "homepage": "https://github.com/Avinier/Save-Walter-White#readme",
+  "description": ""
 }

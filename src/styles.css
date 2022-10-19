@@ -2,8 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .image--divs {
-        @apply w-fit
+
+.image--divs {
+    @apply w-fit
+}
+.content {
+    @apply hover:bg-[#1b1b1b9b] p-5 rounded-lg duration-500 text-center
+}
+.content--white p {
+    @apply leading-8 font-semibold
+}
+.content--end {
+    @apply font-markerfont text-secondary text-4xl text-center
+}
+.bgsvgs {
+    @apply absolute -z-20
+}
+.bigsvg {
+    @apply absolute -z-20 opacity-50
+}
+.savebanner {
+    background-image: linear-gradient(45deg, #ff6315, #F9CB47, #FF5B36);
+    background-size: 200% 200%;
+    animation: gradient 7s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
+
+.donatebtn {
+    border-radius: 12px;
+    border: 3px outset #888;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #eee;
+    text-transform: uppercase;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px -3px rgba(250, 250, 250, 0.499);
+    font-family: 'Work Sans';
+    font-size: 28px;
+    text-decoration: none;
+    background:linear-gradient(160deg, #ff4141, #f51717);  
+    transition: 0.3s;
+  
+  }
+
+  .donatebtn:hover {
+    box-shadow: 0px 0px 30px -3px rgba(250, 250, 250, 0.499);
+
+  }
+
+  .donatebtn:active {
+    border: 3px outset rgb(157, 21, 21)717;
+    color: #fff;
+    background:linear-gradient(160deg, #ff4141, #f51717);  
+    text-shadow: 0px 0px 4px #ff6a88;
+    box-shadow: 0 0 10px #ff1c4a, 0 0 40px #ff1c4a, 0 0 80px #ff1c4a;
+    transition-delay: 1s;
+  }
+  
+  .donatebtn span {
+    position: absolute;
+    display: block;
+  }
+  
+  .donatebtn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff67ae);
+  }
+  .donatebtn:active span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+  }
+  .donatebtn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #eee);
+  }
+  .donatebtn:active span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+  .donatebtn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #eee);
+  }
+  .donatebtn:active span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+  
+  .donatebtn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #eee);
+  }
+  .donatebtn:active span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  }
+
+  .gradientoverlay {
+   background-image:  linear-gradient(200deg,
+  hsla(186, 100%, 50%, 0.384) 0%,
+  hsla(186, 100%, 50%, 0.218) 19%,
+  hsla(186, 100%, 50%, 0.123) 34%,
+  hsla(186, 100%, 50%, 0.058) 47%,
+  hsla(186, 100%, 50%, 0.046) 56.5%,
+  hsla(186, 100%, 50%, 0.029) 65%,
+  hsla(186, 100%, 50%, 0.01) 73%,
+  hsla(186, 100%, 50%, 0.008) 80.2%,
+  hsla(186, 100%, 50%, 0) 86.1%,
+  hsla(186, 100%, 50%, 0) 91%,
+  hsla(186, 100%, 50%, 0) 95.2%,
+  hsla(186, 100%, 50%, 0) 98.2%,
+  hsla(186, 100%, 50%, 0) 100%
+);
+  }
