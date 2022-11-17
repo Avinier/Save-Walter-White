@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url("../assets/brba.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form {
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.482);
+    box-shadow:  inset 2px 2px 10px #fff092, inset -5px -5px 10px #fffdef;
+}
+
+.input {
+    box-shadow:  inset 2px 2px 7px #fff092, inset -5px -5px 10px #fffdef;
+  transition: all 0.2s ease-in-out;
+}
+
+.input::placeholder {
+  color: #32bfa7;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow:  inset 1px 1px 2px #fff092, inset -1px -1px 2px #fffdef;
+}
+
+.btn {
+    box-shadow: -2px -2px 10px #fffdef,  2px 2px 10px #fff092;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: -2px -2px 5px #fffdef, 2px 2px 5px #fff092;
+  }
+  
+.btn:active {
+    box-shadow: inset 1px 1px 2px #fff092, inset -1px -1px 2px #fffdef;
+  }

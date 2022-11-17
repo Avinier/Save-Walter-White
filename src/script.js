@@ -2,8 +2,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 //Background SVGS
 for (let i = 1; i <= 150; i++) {
-  min = Math.ceil(40);
-  max = Math.floor(60);
+  let min = Math.ceil(40);
+  let max = Math.floor(60);
 
   let sizeNum = Math.floor(Math.random() * (max - min + 1) + min);
 
@@ -23,8 +23,8 @@ for (let i = 1; i <= 150; i++) {
 }
 
 for (let j = 1; j <= 150; j++) {
-  min = Math.ceil(0);
-  max = Math.floor(750);
+  let min = Math.ceil(0);
+  let max = Math.floor(750);
 
   let topNum = Math.floor(Math.random() * (max - min + 1) + min);
   let leftNum = Math.floor(Math.random() * (95 - min + 1) + min);
@@ -35,8 +35,8 @@ for (let j = 1; j <= 150; j++) {
 }
 
 for (let i = 1; i <= 25; i++) {
-  min = Math.ceil(100);
-  max = Math.floor(150);
+  let min = Math.ceil(100);
+  let max = Math.floor(150);
 
   let sizeNum = Math.floor(Math.random() * (max - min + 1) + min);
 
@@ -46,8 +46,8 @@ for (let i = 1; i <= 25; i++) {
 }
 
 for (let j = 1; j <= 25; j++) {
-  min = Math.ceil(0);
-  max = Math.floor(750);
+  let min = Math.ceil(0);
+  let max = Math.floor(750);
 
   let topNum = Math.floor(Math.random() * (max - min + 1) + min);
   let leftNum = Math.floor(Math.random() * (100 - min + 1) + min);
@@ -259,6 +259,7 @@ let bannertl = anime.timeline({
 });
 
 //VISITORS
+import { fetchHandler } from "./form.js";
 let visitorsEl = document.querySelector(".visitors");
 
 const USERDATA = [
@@ -274,10 +275,12 @@ const USERDATA = [
   ["Huell Babinaux", "Some random apartement"],
 ];
 
+const userData = await fetchHandler();
+console.log(userData);
 let list = ``;
 
-USERDATA.map((arr) => {
-  list += `<li class="visitor--items"><span class="text-teal-200">${arr[0]}</span> from ${arr[1]}</li>`;
+userData.map((arr) => {
+  list += `<li class="visitor--items"><span class="text-teal-200">${arr.name}</span> from ${arr.location}</li>`;
 });
 
 visitorsEl.innerHTML = list;
