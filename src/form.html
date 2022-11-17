@@ -1,3 +1,5 @@
+<!-- npx tailwindcss -i ./src/form.css -o ./dist/output.css --watch -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,18 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate!</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script type="module" src="./form.js"></script>
   </head>
-  <body>
-    <form action="send.php" method="post">
-      <div>
-        <label>Enter your name: </label>
-        <input type="text" name="uname" />
+  <body class="font-body">
+    <div
+      class="bg-[#ebecf069] blur-sm absolute top-[33vh] left-[35%] w-[30%] h-[32%] -z-10"
+    ></div>
+    <form
+      onsubmit="return false"
+      class="form w-[30%] mx-auto my-[33vh] p-[20px] rounded-xl"
+    >
+      <div class="pb-[20px]">
+        <input
+          class="input py-2 pl-3 w-[100%] rounded-full bg-[#ebecf069]"
+          type="text"
+          name="uname"
+          class="uname"
+          placeholder="What is your name?"
+        />
       </div>
-      <div>
-        <label>Enter your location: </label>
-        <input type="text" name="ulocation" />
+      <div class="pb-[20px]">
+        <input
+          class="input py-2 pl-3 w-[100%] rounded-full bg-[#ebecf069]"
+          type="text"
+          name="ulocation"
+          class="ulocation"
+          placeholder="Where do you stay?"
+        />
       </div>
-      <button type="submit">Donate!</button>
+      <div class="flex flex-col">
+        <button
+          type="submit"
+          class="btn w-[50%] bg-[#d0fff7] py-2 px-[20px] font-bold rounded-full mx-auto text-cyan-500"
+        >
+          Donate!
+        </button>
+        <a
+          class="text-center mt-[20px] text-cyan-600 underline"
+          href="./index.html"
+          >Back</a
+        >
+      </div>
     </form>
   </body>
 </html>
