@@ -7,7 +7,7 @@ export const fetchHandler = async () => {
   if (nameEl && locationEl) {
     if (nameEl.value === "" && locationEl.value === "") {
       alert("Please enter something cmon");
-      console.log("null");
+      console.log("nullz");
       return false;
     }
     const userData = {
@@ -25,7 +25,10 @@ export const fetchHandler = async () => {
         },
       }
     );
-    console.log("All done");
+    alert(
+      "Thanks for donating ;) Now you can return to the main page to see your contributions!"
+    );
+    window.location.reload();
   }
 
   const getResponse = await fetch(
