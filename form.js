@@ -1,8 +1,8 @@
 let btnEl = document.querySelector(".btn");
 
 export const fetchHandler = async () => {
-  let nameEl = document.querySelector(".uname");
-  let locationEl = document.querySelector(".ulocation");
+  let nameEl = document.getElementById("uname");
+  let locationEl = document.getElementById("ulocation");
 
   if (nameEl && locationEl) {
     if (nameEl.value === "" && locationEl.value === "") {
