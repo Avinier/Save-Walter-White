@@ -1,4 +1,8 @@
 <!-- npx tailwindcss -i ./src/styles.css -o ./dist/output.css --watch -->
+<!--TODO:
+
+- class abstraction
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +22,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    <title>Say. My. Name.</title>
+    <title>Document</title>
   </head>
   <body class="bg-[#000] body overflow-x-hidden relative">
     <div class="gradientoverlay w-[100%] h-[100%] fixed -z-10"></div>
@@ -1124,14 +1128,20 @@
         You can help us raise money for Walt's surgery
       </p>
     </div>
-
+    <a href="./form.html" class="donatebtn my-6 ml-[37%]"
+      >Press here to Donate
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
     <section
       class="visitors___section bg-[#111111bc] w-[800px] h-[200px] text-center m-10 truncate p-5 mx-auto rounded-lg"
     >
       <h4 class="text-stone-50 font-main text-2xl">
         ANY AMOUNT WOULD BE APPRECIATED
       </h4>
-      <p class="text-stone-50 pb-4 font-main text-xl">Donators so far:</p>
+      <p class="text-stone-50 pb-4 font-main text-xl">Visitors so far:</p>
       <ul class="visitors text-stone-50 overflow-hidden font-body"></ul>
     </section>
     <footer class="bb-slate-500 font-markerfont text-center">
